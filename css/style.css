@@ -1,0 +1,89 @@
+/*обнуление*/
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html, body {
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    background: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-------------------------------*/
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 30px 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.form_item {
+    margin-bottom: 20px;
+}
+
+.form_label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form_input {
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+    background-color: #7a956b;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.functions {
+    font-size: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    background-color: #fff;
+    border-radius: 20px;
+}
