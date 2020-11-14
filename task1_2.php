@@ -8,25 +8,6 @@
 -->
 <?php
 
-/*$arr = [1, 1, 1, 1, [2, 2, 2], 1, 1, [2, 2, [3, [4, 4, 4], 3]]];
-echo "<pre>";
-print_r($arr);
-
-function recursive(array $arr, string $char)
-{
-    foreach ($arr as $key => $value) {
-        if (!is_array($value)) {
-            echo $charPrint . $value . "<br>";
-            $lastKey = $key;
-        } else {
-            $charPrint .= $char;
-            recursive($value, $charPrint);
-        }
-    }
-}
-
-recursive($arr, "-");*/
-
 $arr = [1, 1, 1, 1, [2, 2, 2], 1, 1, [2, 2, [3, [4, 4, 4], 3]]];
 
 function recursive(array $arr, string $char)
