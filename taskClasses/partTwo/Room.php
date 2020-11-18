@@ -1,7 +1,6 @@
 <!--1) под php v7.3
     2) Нужно ли ограничивать количество людей, дверей, окон в комнате?
-    3) В функции removeDoor проверку делать так $this->door > 0, или правильнее $this->door>=1?
-    4) Пока не работает removePerson
+    3) Пока не работает removePerson, нужно ли менять регистр при проверке имени?
 -->
 
 <?php
@@ -9,9 +8,9 @@
 
 class Room
 {
-    protected $person;
-    protected $window;
-    protected $door;
+    public $person;
+    public $window;
+    public $door;
 
 
     public function __construct(array $person, int $window, int $door)
@@ -33,19 +32,20 @@ class Room
 
     public function removePerson(string $name)
     {
+        $name = strtolower($name);
         if ($this->door > 0) {
-            /* if (count($this->person) == 0) {
-                 return "В комнате нет людей";
-             } else {*/
-            foreach ($this->person as $key => $personName) {
-                if ($personName == $name) {
-                    $this->person = array_splice($this->person, $key, 1);
-//                    unset($this->person[$key]);
-                } else {
-                    return "В комнате нет человека с именем {$name}";
+            if (count($this->person) == 0) {
+                return "В комнате нет людей";
+            } else {
+                foreach ($this->person as $key => $personName) {
+                    $personName = strtolower($personName);
+                    if ($personName == $name) {
+                        unset($this->person[$key]);
+                    } else {
+                        return "В комнате нет человека с именем {$name}";
+                    }
                 }
             }
-//            }
         } else return "В комнате нет дверей!";
         return $this->person;
     }
@@ -87,7 +87,7 @@ class Room
     public
     function checkLight()
     {
-        if ($this->person > 0) {
+        if (count($this->person) > 0) {
             $out = "Свет включен!";
         } else {
             $out = "Свет выключен!";
@@ -113,14 +113,19 @@ class Room
 }
 
 $room1 = new Room([], 2, 1);
-$room1->addPerson('Ivan');
-$room1->pre($room1);
-$room1->pre($room1);
+$room1->addPerson("Ivan");
 $room1->removePerson("Ivan");
-$room1->pre($room1);
 $room1->removeWindow();
+$room1->addPerson("Helen");
+$room1->addPerson("Egor");
+$room1->addPerson("Olga");
 $room1->pre($room1);
-$room1->removeDoor();
-$room1->removeDoor();
+$room1->removePerson("Helen");
+$room1->removePerson("Olga");
 $room1->pre($room1);
+$room1->addWindow();
+$room1->addDoor();
 $room1->pre($room1->roomStatus());
+$room1->pre($room1);
+
+
