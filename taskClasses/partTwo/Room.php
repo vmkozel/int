@@ -8,9 +8,57 @@
 
 class Room
 {
-    public $person;
-    public $window;
-    public $door;
+    private $person;
+    private $window;
+    private $door;
+
+    /**
+     * @return array
+     */
+    public function getPerson()
+    {
+        return $this->person;
+    }
+
+    /**
+     * @param array $person
+     */
+    public function setPerson($person)
+    {
+        $this->person = $person;
+    }
+
+    /**
+     * @return int
+     */
+    public function getWindow()
+    {
+        return $this->window;
+    }
+
+    /**
+     * @param int $window
+     */
+    public function setWindow($window)
+    {
+        $this->window = $window;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDoor()
+    {
+        return $this->door;
+    }
+
+    /**
+     * @param int $door
+     */
+    public function setDoor($door)
+    {
+        $this->door = $door;
+    }
 
 
     public function __construct(array $person, int $window, int $door)
@@ -20,46 +68,45 @@ class Room
         $this->door = $door;
     }
 
-    public function addPerson(string $name)
+    public function addPerson(array $name) //добавляем человека
     {
-        if ($this->door > 0) {
-            $this->person[] = $name;
+        $personInRoom = $this->getPerson();
+        if ($this->getDoor() > 0) {
+            foreach ($name as $key => $person) {
+                $personInRoom[] = $person;
+            }
+            $this->setPerson($personInRoom);
         } else {
             return "В комнате нет дверей! В нее нельзя добавить человека.";
         }
         return $this->person;
     }
 
-    public function removePerson(string $name)
+    public function removePerson(array $name)  //удаляем человека
     {
-        $name = strtolower($name);
-        if ($this->door > 0) {
-            if (count($this->person) == 0) {
-                return "В комнате нет людей";
-            } else {
-                foreach ($this->person as $key => $personName) {
-                    $personName = strtolower($personName);
-                    if ($personName == $name) {
-                        unset($this->person[$key]);
-                    } else {
-                        return "В комнате нет человека с именем {$name}";
-                    }
+        $personInRoom = $this->getPerson();
+        foreach ($name as $key => $value) {
+            foreach ($personInRoom as $inRoomKey => $person) {
+                if ($value == $person) {
+                    array_splice($personInRoom, $inRoomKey, 1);
                 }
             }
-        } else return "В комнате нет дверей!";
-        return $this->person;
+        }
+        return $this - $this->setPerson($personInRoom);
     }
 
-    public
-    function addWindow()
+    public function addWindow(int $quantity = 1)
     {
-        return ++$this->window;
+        $window = $this->getWindow();
+        $window += $quantity;
+        $this->setWindow($window);
+        return $this->getWindow();
     }
 
-    public
-    function removeWindow()
+    public function removeWindow($quantity)
     {
-        if ($this->window > 0) {
+        $window = $this->getWindow();
+        if ($window > 0) {
             $out = --$this->window;
         } else {
             $out = "В комнате нет окон";
@@ -67,33 +114,45 @@ class Room
         return $out;
     }
 
-    public
-    function addDoor()
-    {
-        return ++$this->door;
-    }
+    /*
+            public
+      function removeWindow()
+      {
+          if ($this->window > 0) {
+              $out = --$this->window;
+          } else {
+              $out = "В комнате нет окон";
+          }
+          return $out;
+      }
 
-    public
-    function removeDoor()
-    {
-        if ($this->door > 0) {
-            $out = --$this->door;
-        } else {
-            $out = "В комнате нет дверей";
-        }
-        return $out;
-    }
+      public
+      function addDoor()
+      {
+          return ++$this->door;
+      }
 
-    public
-    function checkLight()
-    {
-        if (count($this->person) > 0) {
-            $out = "Свет включен!";
-        } else {
-            $out = "Свет выключен!";
-        }
-        return $out;
-    }
+      public
+      function removeDoor()
+      {
+          if ($this->door > 0) {
+              $out = --$this->door;
+          } else {
+              $out = "В комнате нет дверей";
+          }
+          return $out;
+      }
+
+      public
+      function checkLight()
+      {
+          if (count($this->person) > 0) {
+              $out = "Свет включен!";
+          } else {
+              $out = "Свет выключен!";
+          }
+          return $out;
+      }*/
 
     public
     function roomStatus()
@@ -113,19 +172,8 @@ class Room
 }
 
 $room1 = new Room([], 2, 1);
-$room1->addPerson("Ivan");
-$room1->removePerson("Ivan");
-$room1->removeWindow();
-$room1->addPerson("Helen");
-$room1->addPerson("Egor");
-$room1->addPerson("Olga");
+$room1->addPerson(["Ivan", "Oleg", "Helen"]);
+$room1->addPerson(["Ivan", "Oleg", "Helen"]);
+$room1->addWindow(3);
 $room1->pre($room1);
-$room1->removePerson("Helen");
-$room1->removePerson("Olga");
-$room1->pre($room1);
-$room1->addWindow();
-$room1->addDoor();
-$room1->pre($room1->roomStatus());
-$room1->pre($room1);
-
-
+$room1->removePerson(["Ivan"]);
