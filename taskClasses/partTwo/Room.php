@@ -1,6 +1,17 @@
 <!--1) под php v7.3
     2) Нужно ли ограничивать количество людей, дверей, окон в комнате?
     3) Пока не работает removePerson, нужно ли менять регистр при проверке имени?
+
+     check
+        +    добавляем человека
+        +    удаляем человека
+        +    добавляем окна
+        +    удаляем окна
+        +    удаляем двери
+        +    добавляем двери
+        +    проверяем свет
+        +    провеярем статус комнаты
+
 -->
 
 <?php
@@ -95,7 +106,7 @@ class Room
         return $this - $this->setPerson($personInRoom);
     }
 
-    public function addWindow(int $quantity = 1)
+    public function addWindow(int $quantity = 1)  //добавляем окна
     {
         $window = $this->getWindow();
         $window += $quantity;
@@ -103,61 +114,53 @@ class Room
         return $this->getWindow();
     }
 
-    public function removeWindow($quantity)
+    public function removeWindow(int $quantity = 1)     //удаляем окна
     {
         $window = $this->getWindow();
         if ($window > 0) {
-            $out = --$this->window;
+            $out = $window - $quantity;
         } else {
             $out = "В комнате нет окон";
         }
         return $out;
     }
 
-    /*
-            public
-      function removeWindow()
-      {
-          if ($this->window > 0) {
-              $out = --$this->window;
-          } else {
-              $out = "В комнате нет окон";
-          }
-          return $out;
-      }
-
-      public
-      function addDoor()
-      {
-          return ++$this->door;
-      }
-
-      public
-      function removeDoor()
-      {
-          if ($this->door > 0) {
-              $out = --$this->door;
-          } else {
-              $out = "В комнате нет дверей";
-          }
-          return $out;
-      }
-
-      public
-      function checkLight()
-      {
-          if (count($this->person) > 0) {
-              $out = "Свет включен!";
-          } else {
-              $out = "Свет выключен!";
-          }
-          return $out;
-      }*/
-
-    public
-    function roomStatus()
+    public function addDoor(int $quantity = 1)  //добавляем двери
     {
-        $personCount = count($this->person);
+        $door = $this->getDoor();
+        $door += $quantity;
+        $this->setDoor($door);
+        return $door;
+    }
+
+    public function removeDoor(int $quantity = 1)   //удаляем двери
+    {
+        $door = $this->getDoor();
+        if ($door > 0) {
+            $door = $door - $quantity;
+            if ($door < 0) {
+                $door = 0;
+            }
+            $this->setDoor($door);
+        } else {
+            return "В комнате нет дверей";
+        }
+        return $door;
+    }
+
+    public function checkLight()    //проверяем свет
+    {
+        if (count($this->getPerson()) > 0) {
+            $out = "Свет включен!";
+        } else {
+            $out = "Свет выключен!";
+        }
+        return $out;
+    }
+
+    public function roomStatus()    //проверяем статус комнаты
+    {
+        $personCount = count($this->getPerson());
         $lightStatus = $this->checkLight();
         return "Количество человек в комнате {$personCount}. $lightStatus";
     }
@@ -177,3 +180,9 @@ $room1->addPerson(["Ivan", "Oleg", "Helen"]);
 $room1->addWindow(3);
 $room1->pre($room1);
 $room1->removePerson(["Ivan"]);
+$room1->addDoor(4);
+$room1->pre($room1);
+$room1->removeDoor(10);
+echo $room1->checkLight();
+echo $room1->roomStatus();
+$room1->pre($room1);
