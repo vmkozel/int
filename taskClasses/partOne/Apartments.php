@@ -265,12 +265,10 @@ class Rooms extends Apartments
      */
     public function getRoomInfo()
     {
+        parent::getApartmentInfo();
         return "Назначение комнаты {$this->writeRoomPurpose()} ее площадь {$this->getRoomSquare()} сторона дома {$this->checkSunnySide()}.";
     }
 }
 
-
 $room1 = new Rooms(2, 2, 2, "Свердлова 45", 8, 16.8, 1);
-//echo "<pre>";
-//print_r($room1);
 echo "<br>" . $room1->getRoomInfo();
