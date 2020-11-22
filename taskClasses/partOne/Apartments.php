@@ -128,15 +128,15 @@ class Apartments
 
 }
 
-$apartment1 = new Apartment(3, 4, 2, "Горького 74");
+$apartment1 = new Apartments(3, 4, 2, "Горького 74");
 echo $apartment1->getApartmentInfo();
 
-class Rooms extends Apartment
+class Rooms extends Apartments
 {
     /**
      * @var int
      */
-    private $roomPurpose;
+    private $roomPurpose = 8;
     /**
      * @var float
      */
@@ -147,13 +147,18 @@ class Rooms extends Apartment
     private $roomSunnySide;
 
     /**
-     * Room constructor.
+     * Rooms constructor.
+     * @param int $numOfRooms
+     * @param int $floor
+     * @param int $balcony
+     * @param string $address
      * @param int $roomPurpose
      * @param float $roomSquare
      * @param int $roomSunnySide
      */
-    public function __construct(int $roomPurpose, float $roomSquare, int $roomSunnySide)
+    public function __construct(int $numOfRooms, int $floor, int $balcony, string $address, int $roomPurpose, float $roomSquare, int $roomSunnySide)
     {
+        parent::__construct($numOfRooms, $floor, $balcony, $address);
         $this->roomPurpose = $roomPurpose;
         $this->roomSquare = $roomSquare;
         $this->roomSunnySide = $roomSunnySide;
@@ -208,7 +213,9 @@ class Rooms extends Apartment
         $this->roomSunnySide = $roomSunnySide;
     }
 
-
+    /**
+     * @return string
+     */
     public function writeRoomPurpose()
     {
         switch ($this->getRoomPurpose()) {
@@ -241,7 +248,20 @@ class Rooms extends Apartment
         }
     }
 
+    /**
+     * @return string
+     */
+    public function checkSunnySide()
+    {
+        if ($this->getRoomSunnySide() == 0) {
+            return "солнечная";
+        } else {
+            return "теневая сторона";
+        }
+    }
 }
 
 
-
+$room1 = new Rooms(2, 2, 2, "Свердлова 45", 2, 16.8, 1);
+echo "<pre>";
+print_r($room1);
