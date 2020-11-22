@@ -226,22 +226,22 @@ class Rooms extends Apartments
                 echo "детская";
                 break;
             case 3:
-                echo "ванная";
+                return "ванная";
                 break;
             case 4:
-                echo "туалет";
+                return "туалет";
                 break;
             case 5:
-                echo "кухня";
+                return "кухня";
                 break;
             case 6:
-                echo "прихожая";
+                return "прихожая";
                 break;
             case 7:
-                echo "кладовка";
+                return "кладовка";
                 break;
             case 8:
-                echo "коридор";
+                return "коридор";
                 break;
             default;
                 echo "свободного назначения";
@@ -251,17 +251,26 @@ class Rooms extends Apartments
     /**
      * @return string
      */
-    public function checkSunnySide()
+    private function checkSunnySide()
     {
         if ($this->getRoomSunnySide() == 0) {
             return "солнечная";
         } else {
-            return "теневая сторона";
+            return "теневая";
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function getRoomInfo()
+    {
+        return "Назначение комнаты {$this->writeRoomPurpose()} ее площадь {$this->getRoomSquare()} сторона дома {$this->checkSunnySide()}.";
     }
 }
 
 
-$room1 = new Rooms(2, 2, 2, "Свердлова 45", 2, 16.8, 1);
-echo "<pre>";
-print_r($room1);
+$room1 = new Rooms(2, 2, 2, "Свердлова 45", 8, 16.8, 1);
+//echo "<pre>";
+//print_r($room1);
+echo "<br>" . $room1->getRoomInfo();
