@@ -17,8 +17,17 @@
 
 class Room
 {
+    /**
+     * @var array
+     */
     private $person;
+    /**
+     * @var int
+     */
     private $window;
+    /**
+     * @var int
+     */
     private $door;
 
     /**
@@ -32,7 +41,7 @@ class Room
     /**
      * @param array $person
      */
-    public function setPerson($person)
+    public function setPerson(array $person)
     {
         $this->person = $person;
     }
@@ -48,7 +57,7 @@ class Room
     /**
      * @param int $window
      */
-    public function setWindow($window)
+    public function setWindow(int $window)
     {
         $this->window = $window;
     }
@@ -64,12 +73,18 @@ class Room
     /**
      * @param int $door
      */
-    public function setDoor($door)
+    public function setDoor(int $door)
     {
         $this->door = $door;
     }
 
 
+    /**
+     * Room constructor.
+     * @param array $person
+     * @param int $window
+     * @param int $door
+     */
     public function __construct(array $person, int $window, int $door)
     {
         $this->person = $person;
@@ -77,6 +92,10 @@ class Room
         $this->door = $door;
     }
 
+    /**
+     * @param array $name
+     * @return array|string
+     */
     public function addPerson(array $name) //добавляем человека
     {
         $personInRoom = $this->getPerson();
@@ -91,6 +110,10 @@ class Room
         return $this->person;
     }
 
+    /**
+     * @param array $name
+     * @return Room|void
+     */
     public function removePerson(array $name)  //удаляем человека
     {
         $personInRoom = $this->getPerson();
@@ -104,6 +127,10 @@ class Room
         return $this - $this->setPerson($personInRoom);
     }
 
+    /**
+     * @param int $quantity
+     * @return int
+     */
     public function addWindow(int $quantity = 1)  //добавляем окна
     {
         $window = $this->getWindow();
@@ -112,6 +139,10 @@ class Room
         return $this->getWindow();
     }
 
+    /**
+     * @param int $quantity
+     * @return int|string
+     */
     public function removeWindow(int $quantity = 1)     //удаляем окна
     {
         $window = $this->getWindow();
@@ -123,6 +154,10 @@ class Room
         return $out;
     }
 
+    /**
+     * @param int $quantity
+     * @return int
+     */
     public function addDoor(int $quantity = 1)  //добавляем двери
     {
         $door = $this->getDoor();
@@ -131,6 +166,10 @@ class Room
         return $door;
     }
 
+    /**
+     * @param int $quantity
+     * @return int|string
+     */
     public function removeDoor(int $quantity = 1)   //удаляем двери
     {
         $door = $this->getDoor();
@@ -146,6 +185,9 @@ class Room
         return $door;
     }
 
+    /**
+     * @return string
+     */
     public function checkLight()    //проверяем свет
     {
         if (count($this->getPerson()) > 0) {
@@ -156,6 +198,9 @@ class Room
         return $out;
     }
 
+    /**
+     * @return string
+     */
     public function roomStatus()    //проверяем статус комнаты
     {
         $personCount = count($this->getPerson());
@@ -163,8 +208,10 @@ class Room
         return "Количество человек в комнате {$personCount}. $lightStatus";
     }
 
-    public
-    function pre($var)
+    /**
+     * @param $var
+     */
+    public function pre($var)
     {
         echo "<pre>";
         print_r($var);
