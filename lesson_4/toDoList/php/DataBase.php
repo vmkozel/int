@@ -14,12 +14,13 @@ class DataBase
     private $pdo;
 
     /**
-     * @return PDO
+     * @var string
      */
-    public function getPdo()
-    {
-        return $this->pdo;
-    }
+    private $statement;
+    /**
+     * @var array
+     */
+    private $param;
 
     const DB_HOST = 'localhost';
     const DB_NAME = 'toDoList';
@@ -38,10 +39,39 @@ class DataBase
      */
     public function __construct()
     {
-        return $this->pdo = new PDO(self::DSN, self::DB_USERNAME, self::DB_PASSWORD, self::PDO_OPTIONS);
+        $this->pdo = new PDO(self::DSN, self::DB_USERNAME, self::DB_PASSWORD, self::PDO_OPTIONS);
+    }
+
+    /**
+     * @param string $sql
+     * @param array $param
+     * @return mixed
+     *
+     */
+    private function init(string $sql, array $param)
+    {
+        $this->statement = $this->pdo->prepare($sql);
+    }
+
+    private function bind(array $param):void
+    {
+        foreach ($param as $value) {
+            $this->pdo->
+        }
     }
 }
 
 $db = new DataBase();
+pre($db);
+$newTask[] = "Some task";
+$execute = 'INSERT INTO `tasks` (`task`) VALUES (:newTask)';
+$db->execute($execute, $newTask);
+
 $sql = 'SELECT * FROM `tasks`';
-pre($db->getPdo()->query($sql)->fetchAll());
+$result = $db->query($sql);
+pre($result);
+
+
+
+
+

@@ -11,7 +11,10 @@
 <?php
 
 $arr = [2, 2, 2, 2, -1,];
-function printArr($arr)
+/**
+ * @param array $arr
+ */
+function printArr(array $arr)
 {
     $len = count($arr);
     for ($i = 0; $len > $i; $i++) {

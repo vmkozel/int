@@ -1,5 +1,11 @@
 <?php
 
+function pre($var)
+{
+    echo "<br><pre>";
+    print_r($var);
+    echo "</pre>";
+}
 
 class Task
 {
@@ -9,9 +15,9 @@ class Task
     private $task;
 
     /**
-     * @return array
+     * @return array|null
      */
-    public function getTask(): array
+    public function getTask()
     {
         return $this->task;
     }
@@ -24,7 +30,18 @@ class Task
         $this->task = $task;
     }
 
-  public function
+    public function writeTasks()
+    {
+        foreach ($this->task as $item => $value) {
+            echo $value . "<br>";
+        }
+    }
 }
 
+
 $task1 = new Task();
+$sql = 'SELECT * FROM `tasks` ORDER BY id DESC';
+pre($task1);
+pre($sql);
+
+$task1->writeTasks($task1->getTask());

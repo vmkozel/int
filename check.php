@@ -1,4 +1,5 @@
 <?php
+
 if (!($_POST['a']) || !($_POST['b'] || !($_POST['c']))) {
     require_once $_SERVER['DOCUMENT_ROOT'] . '/task1_4warning.html';
     return;
@@ -9,8 +10,7 @@ $c = $_POST['c'];
 
 function writeArr($arr)
 {
-    echo "<hr><br>";
-    echo "<pre>";
+    echo "<hr><br><pre>";
     print_r($arr);
     echo "<br><hr>";
 }
