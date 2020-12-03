@@ -1,10 +1,6 @@
 <?php
-function pre($var)
-{
-    echo "<br><pre>";
-    print_r($var);
-    echo "</pre>";
-}
+
+
 
 class DataBase
 {
