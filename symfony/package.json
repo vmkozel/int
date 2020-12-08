@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "webpack-encore-bundle": "symfony/webpack-encore-bundle"
+  },
+  "devDependencies": {
+    "bs-custom-file-input": "^1.3.4",
+    "popper.js": "^1.16.1"
+  }
+}
