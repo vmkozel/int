@@ -23,56 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84ff7d89-9943-4557-a235-0f23c2dc102a" name="Default Changelist" comment="symfony command prompt">
-      <change afterPath="$PROJECT_DIR$/symfony/assets/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/assets/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/assets/controllers.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/assets/controllers/hello_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/assets/styles/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/assets.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/prod/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/test/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/config/packages/webpack_encore.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/public/assets/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symfony/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony" beforeDir="false" afterPath="$PROJECT_DIR$/symfony" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/user/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/templates/user/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/templates/user/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +42,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/symfony" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -230,7 +181,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -284,6 +235,7 @@
       <workItem from="1607250664243" duration="26000" />
       <workItem from="1607280637357" duration="9387000" />
       <workItem from="1607355179065" duration="4275000" />
+      <workItem from="1607446177367" duration="525000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605378886365</created>
@@ -404,6 +356,11 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/lesson5" />
+      <path value="$PROJECT_DIR$/lesson5/--" />
+      <path value="$PROJECT_DIR$/symfony" />
+    </ignored-roots>
     <MESSAGE value="first commit" />
     <MESSAGE value="task 1_2" />
     <MESSAGE value="make Class Room, removePerson dont working" />
@@ -532,16 +489,16 @@
     </state>
     <state x="763" y="463" key="NewPhpFileDialog/0.0.1857.1080@0.0.1857.1080" timestamp="1606332937837" />
     <state x="763" y="463" key="NewPhpFileDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1605542763200" />
-    <state x="430" y="185" width="995" height="710" key="SettingsEditor" timestamp="1607282183466">
+    <state x="430" y="185" width="995" height="710" key="SettingsEditor" timestamp="1607446702119">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="430" y="185" width="995" height="710" key="SettingsEditor/0.0.1857.1080@0.0.1857.1080" timestamp="1606334345755" />
-    <state x="430" y="185" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1607282183466" />
-    <state x="521" y="273" key="Vcs.Push.Dialog.v2" timestamp="1607365681797">
+    <state x="430" y="185" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1607446702119" />
+    <state x="521" y="273" key="Vcs.Push.Dialog.v2" timestamp="1607446636542">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="521" y="273" key="Vcs.Push.Dialog.v2/0.0.1857.1080@0.0.1857.1080" timestamp="1606334352538" />
-    <state x="521" y="273" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1607365681797" />
+    <state x="521" y="273" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1607446636542" />
     <state x="827" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1606246190421">
       <screen x="0" y="0" width="1857" height="1080" />
     </state>
